@@ -1,0 +1,106 @@
+import tkinter as tk from tkinter import * from tkinter import ttk
+
+root = tk.Tk()
+
+scrollbar_tk = Scrollbar(root) scrollbar_tk.pack(side=RIGHT, fill=Y)
+
+root.geometry("1000x8000")
+
+root.title('Registration form') root.configure(bg='skyblue')
+
+label_0 =Label(root,bg="skyblue",text="Student Registration form",width=50,font=("bold",20))
+
+label_0.place(x=90,y=60)
+
+
+label_1 =Label(root,bg="skyblue",text="FIRST NAME", width=20,font=("bold",10)) label_1.place(x=20,y=130)
+
+
+entry_1=Entry(root,width=50) entry_1.place(x=200,y=130)
+label_a =Label(root,bg="skyblue",text="[max 30 characters a-z and A-Z]", width=60,font=("normal",8))
+label_a.place(x=400,y=130)
+
+
+label_1 =Label(root,bg="skyblue",text="LAST NAME", width=20,font=("bold",10)) label_1.place(x=20,y=180)
+
+entry_1=Entry(root,width=50) entry_1.place(x=200,y=180)
+label_a =Label(root,bg="skyblue",text="[max 30 characters a-z and A-Z]", width=60,font=("normal",8))
+label_a.place(x=400,y=180)
+
+
+label_1 =Label(root,bg="skyblue",text="DATE OF BIRTH", width=20,font=("bold",10))
+ 
+label_1.place(x=20,y=230)
+
+label_12=ttk.Label(root, text = "Select the Month :", font = ("Times New Roman", 10))
+label_12.place(x=200,y=230)
+
+
+n = tk.StringVar()
+monthchoosen = ttk.Combobox(root, width = 27, textvariable = n)
+
+monthchoosen['values'] = (' January',	' February',	' March',	' April',	' May',	' June',	' July',	' August',		' September',		' October',	' November', ' December')
+monthchoosen.place(x=500,y=230) monthchoosen.current()
+
+
+ttk.Label(root, text = "Select the Year :", font = ("Times New Roman", 10)).place(x=200,y=280)
+
+n1 = tk.StringVar()
+yearchoosen = ttk.Combobox(root, width = 27, textvariable = n1)
+
+yearchoosen['values'] = (' 1991',' 1992',' 1993',' 1994',' 1995',' 1996',' 1997','
+1998',	' 1999',	' 2000',	' 2001','
+2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2
+014','2015','2016','2017','2018','2019','2020','2021','2022','2023')
+yearchoosen.place(x=500,y=280) yearchoosen.current()
+
+ttk.Label(root, text = "Select the day :", font = ("Times New Roman", 10)).place(x=200,y=330)
+
+
+n2 = tk.StringVar()
+daychoosen = ttk.Combobox(root, width = 27, textvariable = n2)
+
+
+daychoosen['values'] = (' 1',' 2',' 3', ' 4',	' 5',	' 6',	' 7',	' 8',	'
+9',	' 10',	' 11',	' 12',	' 13',	' 14',	' 15',	' 16',	' 17',	'
+
+18',	' 19',	' 20',	' 21',	' 22',	' 23',	' 24', '	25',	'	26',	'
+27',	' 28',	' 29',	' 30',	' 31')						
+daychoosen.place(x=500,y=330) daychoosen.current()
+ 
+label_1 =Label(root,bg="skyblue",text="EMAIL ID", width=20,font=("bold",10)) label_1.place(x=20,y=380)
+
+
+entry_1=Entry(root,width=50) entry_1.place(x=200,y=380)
+
+
+label_1 =Label(root,bg="skyblue",text="MOBILE NUMBER", width=20,font=("bold",10)) label_1.place(x=20,y=420)
+
+entry_1=Entry(root,width=50) entry_1.place(x=200,y=420)
+label_a =Label(root,bg="skyblue",text="(10 digit number)", width=60,font=("normal",8)) label_a.place(x=400,y=420)
+
+label_1 =Label(root,bg="skyblue",text="GENDER", width=20,font=("bold",10)) label_1.place(x=20,y=470)
+
+var = tk.IntVar()
+Rb1=Radiobutton(root, text="Male", variable=var, value=1) Rb1.place(x=200,y=470)
+Rb2=Radiobutton(root, text="Female", variable=var, value=2) Rb2.place(x=300,y=470)
+
+label_1 =Label(root,bg="skyblue",text="ADDRESS", width=20,font=("bold",10)) label_1.place(x=20,y=520)
+
+entry_1=Text(root,width=50,height=3) entry_1.place(x=200,y=520)
+
+label_1 =Label(root,bg="skyblue",text="CITY", width=20,font=("bold",10)) label_1.place(x=20,y=590)
+
+entry_1=Entry(root,width=50) entry_1.place(x=200,y=590)
+label_a5 =Label(root,bg="skyblue",text="[max 30 characters a-z and A-Z]", width=60,font=("normal",8))
+label_a5.place(x=400,y=590)
+
+label_1 =Label(root,bg="skyblue",text="PINCODE", width=20,font=("bold",10)) label_1.place(x=20,y=630)
+
+entry_1=Entry(root,width=50) entry_1.place(x=200,y=630)
+ 
+label_a5 =Label(root,bg="skyblue",text="[6 digit Number]", width=60,font=("normal",8)) label_a5.place(x=400,y=630)
+
+b1=Button(root, text='Submit',width=10,bg='brown',fg='white',command=root.destroy,font=("bold", 15)) b1.place(x=800,y=600)
+
+root.mainloop()
