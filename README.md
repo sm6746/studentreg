@@ -43,3 +43,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 - Inspired by the need for simple registration forms in various applications.
 - Thanks to the Python community for creating and maintaining Tkinter library.
+- 
